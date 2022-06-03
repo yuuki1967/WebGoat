@@ -26,6 +26,7 @@ jobs:
       run: mvn -B package -DskipTests=true --file pom.xml
     - name: Path Call Out
       run: ls -la ./webgoat-server/target
-    - uses: anchore/sbom-action@v0
+    - name: SBOM
+      uses: anchore/sbom-action@v0
       with:
-        artifact-name: sbom.spdx
+        path: ./webgoat-server/target
