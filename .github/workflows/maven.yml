@@ -22,12 +22,6 @@ jobs:
         cache: maven
     - name: Path Call Out
       run: ls -la
-  
-  mavenBuild: 
-    runs-on: ubuntu-latest
-    name: maven build
-    needs : buildSetup 
-    steps:
     - name: BuildwithMaven
       run: mvn -B package -DskipTests=true --file pom.xml
     - name: Path Call Out
