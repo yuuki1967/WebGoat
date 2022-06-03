@@ -26,19 +26,12 @@ jobs:
       run: mvn -B package -DskipTests=true --file pom.xml
     - name: Path Call Out
       run: ls -la ./webgoat-server/target
+    - uses: anchore/sbom-action@v0
+      with:
+        image: ./webgoat-server/target/webgoat-server-v8.0.0-SNAPSHOT.jar
+        dependency-snapshot: true
 
-#  uploadSBOM:
-#    runs-on: ubuntu-latest
-#    name: Upload Software Bill of Materials
-#    needs: mavenBuild
-#    if: always()
-#    steps:
-#     - uses: anchore/sbom-action@v0
-#       with:
-#         image: ./webgoat-server/target/webgoat-server-v8.0.0-SNAPSHOT.jar
-#         dependency-snapshot: true
-
-#     - uses: anchore/sbom-action@v0
-#       with: 
-#          image: ./webwolf/target/webwolf-v8.0.0-SNAPSHOT.jar
-#          dependency-snapshot: true
+    - uses: anchore/sbom-action@v0
+      with: 
+        image: ./webwolf/target/webwolf-v8.0.0-SNAPSHOT.jar
+        dependency-snapshot: true
