@@ -1,4 +1,3 @@
-# Compliance
 on:
   workflow_run:
     workflows: [run tests]
