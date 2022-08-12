@@ -9,6 +9,9 @@ jobs:
         uses: GeekMasher/advanced-security-compliance@v1.6.1
         # This is the technology you want to write a rule for
         with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+        # Disable everything else to check for and focus on licensing
+          argvs: '--disable-dependabot --disable-secret-scanning --disable-code-scanning'
         # The owner/repo of where the policy is stored  
         # policy: GeekMasher/security-queries
         # The local (within the workspace) or repository
