@@ -1,0 +1,16 @@
+# Compliance
+on:
+  workflow_run:
+    workflows: [run tests]
+    types: 
+    - requested
+- name: Advance Security Compliance Action
+  uses: GeekMasher/advanced-security-compliance@v1.6.1
+  # This is the technology you want to write a rule for
+  with:
+    # The owner/repo of where the policy is stored  
+    # policy: GeekMasher/security-queries
+    # The local (within the workspace) or repository
+    policy-path: policies/default.yml
+    # The branch you want to target
+    policy-branch: main
