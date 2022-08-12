@@ -13,4 +13,5 @@ jobs:
           jira_user: '${{ secrets.JIRA_USER }}'
           jira_token: '${{ secrets.JIRA_TOKEN }}'
           jira_project: 'WEB'
+          github_tokn: '${{ secrets.ACCESS_TOKEN }}'
           sync_direction: 'gh2jira'
