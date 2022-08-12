@@ -1,3 +1,4 @@
+name: "Check Compliance"
 on:
   workflow_run:
     workflows: [run tests]
