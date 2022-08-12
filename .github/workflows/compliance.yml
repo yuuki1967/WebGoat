@@ -1,5 +1,5 @@
 name: "Check Compliance"
-on: workflow_call
+on: workflow_dispatch
     
 jobs:
   check_compliance:
