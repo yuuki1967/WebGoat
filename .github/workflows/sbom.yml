@@ -31,7 +31,7 @@ jobs:
       - name: analyze sbom
         uses: anchore/sbom-action@v0
         with:
-          path: .
+          path: /home/runner/work/WebGoat/WebGoat
       - name: publish sbom
         uses: anchore/sbom-action/publish-sbom@v0
         with:
