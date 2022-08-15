@@ -2,8 +2,8 @@ name: "SBOM"
 on: workflow_dispatch
 
 jobs:
-  job:
+  sbom_job:
     steps:
-    - uses: anchore/sbom-action@v0
-      with:
-        path: .
+      - uses: anchore/sbom-action@v0
+        with:
+          path: .
