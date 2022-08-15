@@ -3,6 +3,7 @@ on: workflow_dispatch
 
 jobs:
   sbom_job:
+    runs-on: ubuntu-latest
     steps:
       - uses: anchore/sbom-action@v0
         with:
