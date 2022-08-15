@@ -8,6 +8,10 @@ jobs:
       actions: read
       contents: read
       security-events: write
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        java: [15]
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK ${{ matrix.java }}
