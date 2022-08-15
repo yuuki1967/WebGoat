@@ -1,0 +1,7 @@
+on: workflow_dispatch
+
+jobs:
+  steps:
+  - uses: anchore/sbom-action@v0
+    with:
+      path: .
