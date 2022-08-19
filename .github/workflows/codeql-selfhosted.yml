@@ -29,9 +29,11 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-    - name: Setup Java JDK
+    - if: matrix.language == 'java'
+      name: Setup Java JDK
       uses: actions/setup-java@v3.4.1
       with:
+        distribution: 'zulu'
         # The Java version to set up. Takes a whole or semver Java version. See examples of supported syntax in README file
         java-version: 15 
     - name: Checkout repository
