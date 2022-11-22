@@ -6,7 +6,7 @@ jobs:
   create_issue:
     runs-on: ubuntu-latest
     permissions:
-      check: write 
+      checks: write 
     steps:
       - name: Create check run using REST API
         run: |
