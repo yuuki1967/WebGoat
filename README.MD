@@ -115,7 +115,5 @@ docker run -d -p 80:8888 -p 8080:8080 -p 9090:9090 -e TZ=Europe/Amsterdam -e EXC
 
 ## Release note
 
-
-## Test
-2022/09/26
-2022/11/21
+2022/12/29 For compiling with JDK 17, you need to use the version 2.2.2 of asciidoctor-maven-plugin (https://github.com/asciidoctor/asciidoctor-maven-plugin). due to resolve the compile error.
+           modified pom.xml in webgoat-lesson/cross-site-script.
