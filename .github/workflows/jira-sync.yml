@@ -10,7 +10,8 @@ jobs:
         uses: github/ghas-jira-integration@v1
         with:
           jira_url: 'https://yuukie.atlassian.net'
-          jira_user: '${{ secrets.JIRA_USER }}'
+#          jira_user: '${{ secrets.JIRA_USER }}'
+          jira_user: 'yuukie'
           jira_token: '${{ secrets.JIRA_TOKEN }}'
           jira_project: 'WEB'
           github_token: '${{ secrets.ACCESS_TOKEN }}'
