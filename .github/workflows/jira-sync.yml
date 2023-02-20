@@ -11,7 +11,7 @@ jobs:
         with:
           jira_url: 'https://yuukie.atlassian.net'
 #          jira_user: '${{ secrets.JIRA_USER }}'
-          jira_user: 'yuukie'
+          jira_user: '${{ secrets.JIRA_USER_2 }}'
           jira_token: '${{ secrets.JIRA_TOKEN }}'
           jira_project: 'WEB'
           github_token: '${{ secrets.ACCESS_TOKEN }}'
